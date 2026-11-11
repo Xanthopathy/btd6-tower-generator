@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f5f1" />
+    <meta name="description" content="Generate a random Bloons TD 6 tower and crosspath." />
+    <link rel="icon" type="image/png" href="data:," />
+    <title>BTD6 Random Tower</title>
+  </head>
+  <body>
+    <main>
+      <section class="left">
+        <div class="result" aria-live="polite">
+          <div id="tower">Press roll</div>
+          <div id="path">-</div>
+          <div id="note"></div>
+        </div>
+
+        <button id="roll" type="button">Roll</button>
+
+        <h2>History</h2>
+        <div id="hist"></div>
+      </section>
+
+      <section class="right">
+        <div class="card">
+          <div class="ctl">
+            <div class="hd"><span>Highest tier</span><span id="mainOut">0 - 5</span></div>
+            <p class="sub">Range for the tower's main path.</p>
+            <div class="dual" id="main"></div>
+          </div>
+
+          <div class="ctl">
+            <div class="hd"><span>Secondary path tier</span><span id="secOut">0 - 2</span></div>
+            <p class="sub">Range for the second path. The third path is always 0.</p>
+            <div class="dual" id="sec"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="title-row">
+            <div class="title">Towers</div>
+            <label class="lock"><input type="checkbox" id="lock"> Keep tower, reroll path</label>
+          </div>
+          <div id="towers"></div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
